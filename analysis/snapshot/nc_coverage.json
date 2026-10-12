@@ -1,0 +1,33 @@
+{
+  "gpt": {
+    "attempted": 119425,
+    "ok": 119425,
+    "truncated": 0,
+    "parsed": 119410,
+    "raw_lines": 119425
+  },
+  "claude": {
+    "attempted": 119425,
+    "ok": 119424,
+    "truncated": 22950,
+    "parsed": 101969,
+    "api_error": 1,
+    "raw_lines": 119425
+  },
+  "gemini_minimal": {
+    "attempted": 119425,
+    "ok": 119423,
+    "truncated": 92,
+    "parsed": 119417,
+    "api_error": 2,
+    "raw_lines": 119425
+  },
+  "gemini_high": {
+    "attempted": 119425,
+    "ok": 114456,
+    "truncated": 12,
+    "parsed": 114455,
+    "api_error": 4969,
+    "raw_lines": 119425
+  }
+}

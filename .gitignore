@@ -1,0 +1,7 @@
+api_config.py
+.env
+__pycache__/
+.pytest_cache/
+.DS_Store
+numericbench_data/
+analysis/rerun/logs/

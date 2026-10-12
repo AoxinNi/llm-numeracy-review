@@ -1,0 +1,9 @@
+# analysis (rebuild every reported number, table and figure)
+numpy>=1.26
+matplotlib>=3.8
+pytest>=8
+
+# only needed to run new API evaluations (analysis/rerun/run_ctx.py, *_eval.py)
+openai>=1.40
+anthropic>=0.40
+huggingface_hub>=0.23

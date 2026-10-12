@@ -1,0 +1,19 @@
+{
+  "sources": {
+    "nc_results.json": "c7ffca69dc8ac3efa4b27c2154047ec21b1926492f77e24d3d1cee78312d19a3",
+    "ctx_rerun_results.json": "7c27e3ca4165506b8fc572fd9fa39c3810a25760ee15e35aba2761088b57d46c"
+  },
+  "figures": [
+    "fig01_ngf_framework",
+    "fig02_llm_number_pipeline",
+    "fig03_benchmark_landscape",
+    "fig09_tokenization_artifact",
+    "fig10_mitigation_matrix",
+    "fig11_deployment_stack",
+    "fig04_rg_pg_dissociation",
+    "fig05_length_generalization_cliff",
+    "fig06_reasoning_budget_tradeoff",
+    "fig07_tokenizer_blindspots",
+    "fig08_cross_benchmark_ranking"
+  ]
+}

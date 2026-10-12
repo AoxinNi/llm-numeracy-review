@@ -1,0 +1,14 @@
+{
+  "gpt": {
+    "lines": 119425
+  },
+  "claude": {
+    "lines": 119425
+  },
+  "gemini_minimal": {
+    "lines": 119425
+  },
+  "gemini_high": {
+    "lines": 119425
+  }
+}

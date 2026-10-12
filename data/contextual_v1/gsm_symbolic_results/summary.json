@@ -1,0 +1,104 @@
+{
+  "main": {
+    "gpt": {
+      "overall_accuracy": 0.968,
+      "n": 1000,
+      "template_mean": 0.968,
+      "template_std": 0.1377158544455088,
+      "template_min": 0.2,
+      "template_max": 1.0
+    },
+    "claude": {
+      "overall_accuracy": 0.7574626865671642,
+      "n": 804,
+      "template_mean": 0.7526706349206349,
+      "template_std": 0.21013110241404115,
+      "template_min": 0.0,
+      "template_max": 1.0
+    },
+    "gemini_minimal": {
+      "overall_accuracy": 0.264,
+      "n": 1000,
+      "template_mean": 0.264,
+      "template_std": 0.3163938218503176,
+      "template_min": 0.0,
+      "template_max": 1.0
+    },
+    "gemini_high": {
+      "overall_accuracy": 0.782,
+      "n": 1000,
+      "template_mean": 0.782,
+      "template_std": 0.34447442033135967,
+      "template_min": 0.0,
+      "template_max": 1.0
+    }
+  },
+  "p1": {
+    "gpt": {
+      "overall_accuracy": 0.9691689008042895,
+      "n": 746,
+      "template_mean": 0.9693333333333334,
+      "template_std": 0.10130677698487434,
+      "template_min": 0.5,
+      "template_max": 1.0
+    },
+    "claude": {
+      "overall_accuracy": 0.8380952380952381,
+      "n": 840,
+      "template_mean": 0.8355058521725188,
+      "template_std": 0.16478765309415067,
+      "template_min": 0.16666666666666666,
+      "template_max": 1.0
+    },
+    "gemini_minimal": {
+      "overall_accuracy": 0.10510510510510511,
+      "n": 999,
+      "template_mean": 0.105,
+      "template_std": 0.2006932429798716,
+      "template_min": 0.0,
+      "template_max": 0.8
+    },
+    "gemini_high": {
+      "overall_accuracy": 0.5735735735735735,
+      "n": 999,
+      "template_mean": 0.5731111111111111,
+      "template_std": 0.40008472727801336,
+      "template_min": 0.0,
+      "template_max": 1.0
+    }
+  },
+  "p2": {
+    "gpt": {
+      "overall_accuracy": 0.975609756097561,
+      "n": 41,
+      "template_mean": 1.0,
+      "template_std": 0.0,
+      "template_min": 1.0,
+      "template_max": 1.0
+    },
+    "claude": {
+      "overall_accuracy": 0.8695652173913043,
+      "n": 46,
+      "template_mean": 0.8486111111111111,
+      "template_std": 0.1354433734348322,
+      "template_min": 0.6666666666666666,
+      "template_max": 1.0
+    },
+    "gemini_minimal": {
+      "overall_accuracy": 0.006109979633401222,
+      "n": 491,
+      "template_mean": 0.006122448979591837,
+      "template_std": 0.024222607082590244,
+      "template_min": 0.0,
+      "template_max": 0.1
+    },
+    "gemini_high": {
+      "overall_accuracy": 0.19805194805194806,
+      "n": 308,
+      "template_mean": 0.19838709677419356,
+      "template_std": 0.3210617466489746,
+      "template_min": 0.0,
+      "template_max": 1.0
+    }
+  }
+}

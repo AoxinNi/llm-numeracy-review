@@ -1,0 +1,65 @@
+{
+  "built_utc": "2026-10-12T03:24:03",
+  "benchmark": "Number Cookbook (Yang et al., 2025) test split, 44 tasks",
+  "n_items": 119425,
+  "configs": {
+    "gpt": {
+      "responses": "gpt_responses",
+      "format": "openai",
+      "max_tokens": 256
+    },
+    "claude": {
+      "responses": "claude_responses",
+      "format": "anthropic",
+      "max_tokens": 256
+    },
+    "gemini_minimal": {
+      "responses": "gemini_lowthinklevel_responses",
+      "format": "gemini",
+      "max_tokens": null
+    },
+    "gemini_high": {
+      "responses": "gemini_highthinklevel_responses",
+      "format": "gemini",
+      "max_tokens": null
+    }
+  },
+  "versions": {
+    "gpt": {
+      "model_versions": {
+        "gpt-5.4-2026-03-05": 119425
+      },
+      "first_created_utc": "2026-05-12T02:49:47",
+      "last_created_utc": "2026-05-12T13:53:59"
+    },
+    "claude": {
+      "model_versions": {},
+      "first_created_utc": null,
+      "last_created_utc": null
+    },
+    "gemini_minimal": {
+      "model_versions": {
+        "gemini-3-flash-preview": 119423
+      },
+      "first_created_utc": null,
+      "last_created_utc": null
+    },
+    "gemini_high": {
+      "model_versions": {
+        "gemini-3-flash-preview": 114456
+      },
+      "first_created_utc": null,
+      "last_created_utc": null
+    }
+  },
+  "input_sha256": {
+    "data/number_cookbook/items.jsonl.gz": "ef225250ab8058db90d931110d985ff0521ab55d53bf65164749c03e728ebbf8",
+    "data/number_cookbook/responses/gpt.jsonl.gz": "fffea28a9cb3e53727371375f9a49d8bb5a938e0c272ddc8a65aeccd4dfa2112",
+    "data/number_cookbook/responses/claude.jsonl.gz": "dbaac0ef2ca58dce3e073ad355d6f15a5b1f73427be4263351da3e603b50ed2a",
+    "data/number_cookbook/responses/gemini_minimal.jsonl.gz": "0b4e000a63daa432ca2ffd04b62807d955a542a33f829395a74e45b2c15fbfc4",
+    "data/number_cookbook/responses/gemini_high.jsonl.gz": "d4f3b6d69b665005fe7d28f3b3ae41f519ef4f993284e279e89743c9a38e5fec"
+  },
+  "output_sha256": {
+    "nc_items.jsonl.gz": "a029b4486c00b7a2578fe47c1a7f34cb24db01f04a21feb78517f084dcd7e732"
+  }
+}
