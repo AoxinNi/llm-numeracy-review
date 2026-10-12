@@ -30,13 +30,14 @@ PYTHON=python3 bash analysis/run_all.sh     # from the repository root
   with `thinkingConfig.thinkingLevel` MINIMAL (8,192 tokens) or HIGH (32,768 tokens). Every response
   is stored in full with usage, finish reason and returned model version; keys are never logged.
 - `analyze_rerun.py` recomputes NumericBench arithmetic answers exactly: 24 of 1,500 reference
-  answers carry floating-point rounding errors, and both exact roundings are accepted.
+  answers carry floating-point rounding errors, so these items are scored against the exact value
+  (half-up or half-even rounding).
   Original-label accuracy is kept as `acc_original_labels`.
 - `error_types.py` recomputes every written step "a op b = c" in wrong GSM-Symbolic answers with
   exact fractions, skipping percentages, remainders, approximations and partial expressions.
 
 The pipeline is deterministic: rebuilding from the released outputs reproduces the snapshot byte for
-byte and the results hash `ed0ca0568dbf` used in the submitted manuscript.
+byte and the results hash `2730878f3071` used in the submitted manuscript.
 
 ## What changed relative to the earlier scripts
 

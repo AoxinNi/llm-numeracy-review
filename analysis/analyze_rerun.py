@@ -50,7 +50,7 @@ _OPS = {"+": "+", "plus": "+", "-": "-", "minus": "-", "*": "*", "times": "*", "
 def exact_roundings(item):
     """For NumericBench arithmetic items, the exact result rounded half-up and half-even to two
     decimals. Some reference answers were produced with binary floating point and are off by
-    0.01; both exact roundings are accepted."""
+    0.01, so these items are scored against the exact roundings instead of the reference label."""
     import ast
     import re
     from decimal import ROUND_HALF_EVEN, ROUND_HALF_UP, Decimal
@@ -74,7 +74,8 @@ def score_item(item, r):
     text = r.get("text") or ""
     pred = extract_mcq(text) if item["is_mcq"] else extract_numeric(text)
     ok_label = (pred != "" and pred == item["gt"].strip().upper()) if item["is_mcq"] else numeric_equal(pred, item["gt"])
-    ok = ok_label or (not item["is_mcq"] and any(numeric_equal(pred, g) for g in exact_roundings(item)))
+    exact = exact_roundings(item)
+    ok = any(numeric_equal(pred, g) for g in exact) if exact else ok_label
     legacy = (not item["is_mcq"]) and numeric_equal(pred, item["gt"],
                                                   tol=0.005 if item["bench"] == "numericbench" else 0.01)
     return {"status": "ok", "correct": bool(ok), "correct_label": bool(ok_label), "correct_tol": bool(ok or legacy), "pred": pred,

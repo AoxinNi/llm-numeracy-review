@@ -306,7 +306,7 @@ def empirical(nc,ctx):
                      edgecolors='white',linewidth=.8,rasterized=False)
     ax.set(xlim=(-.5,3.5),ylim=(len(tasks)-.5,-.5))
     for i in range(len(tasks)):
-        for j in range(4): ax.text(j,i,f'{int(mat[i,j])}',ha='center',va='center',fontsize=10,
+        for j in range(4): ax.text(j,i,f'{int(mat[i,j])}' if mat[i,j] else '–',ha='center',va='center',fontsize=10,
                                   color='white' if im.norm(mat[i,j])>.58 else INK,weight='bold')
     ax.set_xticks(range(4),['GPT-5.4','Claude\n4.6','Gemini\nMIN','Gemini\nHIGH'])
     ax.set_yticks(range(len(tasks)),[l for _,l in tasks]); ax.tick_params(length=0)
@@ -314,7 +314,7 @@ def empirical(nc,ctx):
     ax.grid(which='minor',color='white',linewidth=1.5); ax.tick_params(which='minor',length=0)
     for s in ax.spines.values(): s.set_visible(False)
     cb=fig.colorbar(im,cax=fig.add_axes([.885,.16,.023,.75]),ticks=[0,10,20,30,40,50])
-    cb.set_label('Longest operand length (digits)\nwith ≥90% exact-match accuracy',labelpad=8,fontsize=8.5)
+    cb.set_label('Largest tested length (digits)\nwith ≥90% exact-match accuracy',labelpad=8,fontsize=8.5)
     cb.outline.set_visible(False)
     cb.solids.set_rasterized(False)
     cb.solids.set_edgecolor('face')  # Avoid hairline seams in PDF viewers.

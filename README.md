@@ -33,7 +33,7 @@ benchmarks, and writes:
 - `paper/generated/tab_*.tex` and `paper/figures/publication/*` — the tables and figures.
 
 No API calls are made. The pipeline is deterministic: it reproduces the snapshot byte for byte and
-the results hash `ed0ca0568dbf` printed by `make_paper_assets.py`. It takes a few minutes on a
+the results hash `2730878f3071` printed by `make_paper_assets.py`. It takes a few minutes on a
 laptop. All outputs are also committed, so they can be inspected without running anything.
 
 ## Repository layout
@@ -81,8 +81,9 @@ answered by every configuration.
 `out/<config>.jsonl` holds every response in full, with token usage, finish reason, returned model
 version, and latency. GPT and Claude were called with temperature 0 and 4,096 output tokens;
 Gemini through the native `generateContent` endpoint with `thinkingLevel` MINIMAL or HIGH.
-24 of the 1,500 NumericBench arithmetic reference answers contain floating-point rounding errors;
-the scorer accepts both exact roundings and also reports accuracy against the original labels.
+24 of the 1,500 NumericBench arithmetic reference answers contain floating-point rounding errors,
+so the three arithmetic subsets are scored against the exactly recomputed value (either exact
+rounding is accepted); accuracy against the original labels is reported separately.
 
 ## Running new evaluations
 
